@@ -9,7 +9,8 @@
     width: 100%;
     z-index: 999;
 }
-.header_right{
+
+.header_right {
     display: flex;
 }
 

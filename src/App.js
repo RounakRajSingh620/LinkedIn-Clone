@@ -8,10 +8,10 @@ function App() {
       {/*Header */}
       <Header />
       {/*App Body*/}
-        {/*Sidebar*/}
-        {/*Feed*/}
-        {/*Widgets*/}
-        
+      {/*Sidebar*/}
+      {/*Feed*/}
+      {/*Widgets*/}
+
     </div>
   );
 }
