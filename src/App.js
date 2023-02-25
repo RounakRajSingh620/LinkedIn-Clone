@@ -10,8 +10,8 @@ function App() {
       <Header />
       {/*App Body*/}
       <div className="app_body">
-      <Sidebar />
       {/*Sidebar*/}
+      <Sidebar />
       {/*Feed*/}
       {/*Widgets*/}
       </div>
