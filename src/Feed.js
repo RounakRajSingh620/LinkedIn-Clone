@@ -4,7 +4,7 @@ import CreateIcon from "@mui/icons-material/Create"
 
 function Feed() {
   return (
-    <div className='feed_inputContainer'>
+    <div className="feed__inputContainer">
       <div className="feed_input">
         <CreateIcon />
         <form>
