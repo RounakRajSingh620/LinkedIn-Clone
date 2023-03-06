@@ -6,10 +6,12 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions"
 import EventNoteIcon from "@mui/icons-material/EventNote"
 import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay"
 import InputOption from './InputOption'
+import Post from './Post'
 
 
 function Feed() {
   return (
+    <div className='feed'>
     <div className="feed__inputContainer">
       <div className="feed_input">
         <CreateIcon />
@@ -25,6 +27,13 @@ function Feed() {
         <InputOption Icon={CalendarViewDayIcon} title='Write article' color="#7FC15E" />
       </div>
 
+    </div>
+    {/* Posts */}
+    <Post
+    name="Raunak Raj"
+    description="This is a test"
+    message ="WOW this worked"
+    />
     </div>
   )
 }
