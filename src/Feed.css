@@ -10,13 +10,13 @@
     padding-bottom: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    width:50%;
+    /* width:100%; */
     /* position:sticky; */
     justify-content: space-evenly;
     /* display: flex; */
     position: sticky;
     height: fit-content;
-    margin-left: 20px;
+    
 }
 
 .feed_input{
