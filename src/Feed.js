@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Feed.css"
 import CreateIcon from "@mui/icons-material/Create"
 import ImageIcon from "@mui/icons-material/Image"
@@ -12,6 +12,9 @@ import { useState } from 'react'
 
 function Feed() {
   const [posts, setPosts] = useState([]);
+
+useEffect(()=> db.collection("posts").onSnapshot{snapshot=>})
+
 const sendPost=(e)=> {
   e.preventDefault();
 };
