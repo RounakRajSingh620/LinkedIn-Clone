@@ -8,10 +8,13 @@ import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay"
 import InputOption from './InputOption'
 import Post from './Post'
 import { useState } from 'react'
-import { db } from "./firebase"
-
+import { db } from './firebase'
+import firebase from 'firebase'
+// import firebase from './firebase';
 
 function Feed() {
+
+  const [input, setInput] = useState([]);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -26,6 +29,14 @@ function Feed() {
   }, []);
   const sendPost = (e) => {
     e.preventDefault();
+
+    db.collection('posts').add({
+      name: 'Raj Singh',
+      description: 'this is a test',
+      message: input,
+      photoUrl: '',
+      timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+    })
   };
 
   return (
@@ -34,6 +45,7 @@ function Feed() {
         <div className="feed_input">
           <CreateIcon />
           <form>
+            <input value={input} onChange={e => setInput(e.target.value)} type="text" />
             <input type="text" />
             <button onClick={sendPost} type="submit">Send</button>
           </form>
