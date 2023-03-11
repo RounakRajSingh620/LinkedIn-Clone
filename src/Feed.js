@@ -8,16 +8,25 @@ import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay"
 import InputOption from './InputOption'
 import Post from './Post'
 import { useState } from 'react'
+import { db } from "./firebase"
 
 
 function Feed() {
   const [posts, setPosts] = useState([]);
 
-useEffect(()=> db.collection("posts").onSnapshot{snapshot=>})
-
-const sendPost=(e)=> {
-  e.preventDefault();
-};
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) =>
+      setPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      )
+    );
+  }, []);
+  const sendPost = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className='feed'>
