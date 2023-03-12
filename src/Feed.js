@@ -9,7 +9,7 @@ import InputOption from './InputOption'
 import Post from './Post'
 import { useState } from 'react'
 import { db } from './firebase'
-import firebase from 'firebase'
+import firebase from 'firebase/compat/app';
 // import firebase from './firebase';
 
 function Feed() {
@@ -35,7 +35,7 @@ function Feed() {
       description: 'this is a test',
       message: input,
       photoUrl: '',
-      timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     })
   };
 
