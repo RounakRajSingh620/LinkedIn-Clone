@@ -34,3 +34,10 @@
     background-color: #0074b1;
     border-radius: 5px;
 }
+.Login_register{
+    color: #0074b1;
+    cursor: pointer;
+}
+.Login>p{
+    margin-top: 20px;
+}
