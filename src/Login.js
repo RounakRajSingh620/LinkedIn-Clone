@@ -2,6 +2,7 @@ import React from 'react';
 import "./Login.css";
 
 function Login() {
+    const loginToApp=()=>{};
     const register=()=>{};
     return (
         <div className="Login">
@@ -12,7 +13,7 @@ function Login() {
                 <input placeholder='Profile pic URL (optional)' type="text" />
                 <input placeholder="Email" type="email" />
                 <input placeholder="Password" type="password" />
-                <button>Sign In</button>
+                <button type='submit' onClick={loginToApp}>Sign In</button>
             </form>
             <p>Not a member ?
                 <span className="login_register" onClick={register}>Register Now</span></p>
