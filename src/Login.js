@@ -8,7 +8,9 @@ function Login() {
             <form>
                 <input placeholder='Full name(required if registrating'
                     type="text" />
-                    <input placeholder='Profile pic URL (optional)' type="text" />
+                <input placeholder='Profile pic URL (optional)' type="text" />
+                <input placeholder='Email' type="email" />
+                <input placeholder='Password' type="password" />
             </form>
         </div>
     );
