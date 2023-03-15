@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Login.css";
 
 function Login() {
-    const loginToApp=()=>{};
+    const [email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
+    const [name,setName]=useState("");
+
+
+    const loginToApp=(e)=>{
+        e.preventDefault();
+    };
     const register=()=>{};
     return (
         <div className="Login">
