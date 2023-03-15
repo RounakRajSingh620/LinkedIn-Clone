@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import "./Login.css";
+import { auth } from "./firebase";
 
 function Login() {
-    const [email,setEmail]=useState("");
-    const [password,setPassword]=useState("");
-    const [name,setName]=useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
 
 
-    const loginToApp=(e)=>{
+    const loginToApp = (e) => {
         e.preventDefault();
     };
-    const register=()=>{};
+    const register = () => { };
     return (
         <div className="Login">
             <img src="https://news.hitb.org/sites/default/files/styles/large/public/field/image/500px-LinkedIn_Logo.svg__1.png?itok=q_lR0Vks" alt="" />
@@ -18,7 +19,8 @@ function Login() {
                 <input placeholder='Full name(required if registrating)'
                     type="text" />
                 <input placeholder='Profile pic URL (optional)' type="text" />
-                <input placeholder="Email" type="email" />
+                <input
+                    value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="email" />
                 <input placeholder="Password" type="password" />
                 <button type='submit' onClick={loginToApp}>Sign In</button>
             </form>
