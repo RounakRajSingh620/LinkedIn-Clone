@@ -12,7 +12,18 @@ function Login() {
     const loginToApp = (e) => {
         e.preventDefault();
     };
-    const register = () => { };
+    const register = () => {
+        if (!name) {
+            return alert("Please enter a full name!");
+        }
+
+        auth.createUserWithEmailAndPassword(email, password).then((userAuth) => {
+            userAuth.user.updateProfile({
+                displayName: name,
+                photoURL : profilePic,
+            })
+        })
+    };
     return (
         <div className="Login">
             <img src="https://news.hitb.org/sites/default/files/styles/large/public/field/image/500px-LinkedIn_Logo.svg__1.png?itok=q_lR0Vks" alt="" />
