@@ -7,10 +7,21 @@ import Feed from './Feed';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 import Login from './Login';
+import {auth} from "./firebase"
+import { useEffect } from 'react';
 
 
 function App() {
   const user = useSelector(selectUser)
+  useEffect(()=>{
+    auth.onAuthStateChanged(userAuth=>{
+      if(userAuth){
+
+      }else{
+
+      }
+    })
+  },[])
 
   return (
     <div className="app">
