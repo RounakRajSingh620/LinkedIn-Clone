@@ -33,7 +33,7 @@ function Login() {
                         photoURL: profilePic,
                     }))
                 })
-        })
+        }).catch((error) => alert(error.message));
     };
     return (
         <div className="Login">
