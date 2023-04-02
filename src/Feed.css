@@ -23,6 +23,7 @@
     border: 1px solid lightgray;
     border-radius: 30px;
     display: flex;
+    
     padding: 10px;
     color: gray;
     padding-left: 15px;
@@ -34,6 +35,7 @@
     margin-left: 10px;
     outline-width: 0;
     font-weight: 600;
+    width:fit-content;
 }
 
 .feed_input>form>button{
