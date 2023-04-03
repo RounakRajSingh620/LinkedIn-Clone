@@ -9,6 +9,7 @@ import { login, logout, selectUser } from './features/userSlice';
 import Login from './Login';
 import { auth } from "./firebase"
 import { useEffect } from 'react';
+import Widgets from './Widgets';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
           {/*Feed*/}
           <Feed />
           {/*Widgets*/}
+          <Widgets/>
         </div>
       )}
     </div >
