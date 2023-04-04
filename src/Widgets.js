@@ -23,6 +23,12 @@ function Widgets() {
         <InfoIcon />
       </div>
       {newsArticle("PAPA React is back", "Top news-9099 readers")}
+      {newsArticle("Coronavirus: UK updates", "Top news-886 readers")}
+      {newsArticle("Tesla hits new highs", "Cars & auto-300 readers")}
+      {newsArticle("Bitcoin Breaks $22k", "Crypto-8000 readers")}
+      {newsArticle("Its Redux too good?", "Code-123 readers")}
+      {newsArticle("PAPA React launches course?!", "Top news-6583 readers")}
+
     </div>
   );
 }
